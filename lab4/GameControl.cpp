@@ -111,6 +111,9 @@ bool GameControl::gameLoop()
 
 	delete board;
 	delete game_view;
+	for (int i = 0; i < players.size(); ++i) {
+		delete players[i];
+	}
 	players.clear();
 	return 0;
 }

@@ -33,7 +33,7 @@ void ConnectFourView::PrintMainMenu() const
 	cout << "              Connect four                 \n";
 	cout << "-------------------------------------------\n";
 	cout << "   Choose number of players from 0-2\n";
-	cout << "         Write exit to exit.\n";
+	cout << "         Write exit to quit.\n";
 }
 
 void ConnectFourView::PrintWinScreen(int value) const

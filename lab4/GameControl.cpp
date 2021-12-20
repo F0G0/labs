@@ -13,13 +13,6 @@ bool GameControl::init()
 
 	std::getline(std::cin, user_input);
 
-	for (int i = 0; i < std::stoi(user_input); ++i) {
-		players.push_back(new Player);
-	}
-	int size = players.size();
-	for (int i = 0; i < (2 - size); ++i) {
-		players.push_back(new Bot);
-	}
 
 	if (user_input.find("exit") == 0 || user_input.find("quit") == 0) {
 		exit = true;
@@ -27,6 +20,14 @@ bool GameControl::init()
 
 	if (exit) {
 		return false;
+	}
+
+	for (int i = 0; i < std::stoi(user_input); ++i) {
+		players.push_back(new Player);
+	}
+	int size = players.size();
+	for (int i = 0; i < (2 - size); ++i) {
+		players.push_back(new Bot);
 	}
 	return true;
 }
